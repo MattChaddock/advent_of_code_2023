@@ -1,0 +1,4 @@
+{
+    "project_name": "Advent of Code Template",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}"
+}
