@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "aoc2023"
+name = "advent_of_code_2023"
 version = "0.1.0"
 description = ""
-authors = ["MattC333"]
+authors = ["MattChaddock"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.12"
 
 
 [tool.poetry.group.dev.dependencies]

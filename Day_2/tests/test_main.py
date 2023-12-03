@@ -1,4 +1,4 @@
-from day2.main import execute
+from Day_2.main import execute
 
 
 def test_main():
