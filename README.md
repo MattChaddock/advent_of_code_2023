@@ -8,6 +8,6 @@ Ensure Poetry is installed on your path ex. `pip install poetry`. Then execute `
 
 To create a new day from the cookiecutter template, execute `poetry run cookiecutter cc-template/` and follow the prompt. The cookiecutter template will create you a `main.py` file with an `execute` function which is the entry point. It also creates a test for that function automatically.
 
-To execute the tests, run `poetry run pytest` to cover the entire suite, or execute a specific day by running `poetry run pytest day1`.
+To execute the tests, run `poetry run pytest` to cover the entire suite, or execute a specific day by running `poetry run pytest Day_1`.
 
 Ruff is included as a formatter and linter. To run these commands you can execute `poetry run ruff check .` and `poetry run ruff format .`.
