@@ -5,9 +5,6 @@ from typing import Dict, List, Tuple
 _ROOT = Path(__file__).resolve().parents[0]
 
 
-
-
-
 def read_puzzle_input(filename):
     with open(Path(_ROOT, "data", filename), "r") as f:
         puzzle_input = f.read().splitlines()
@@ -15,10 +12,12 @@ def read_puzzle_input(filename):
 
 
 def get_row_number_cords(grid_row: str) -> Dict:
-    numbers: List = re.findall(r'[0-9]+', grid_row)
+    numbers: List = re.findall(r"[0-9]+", grid_row)
     number_coordinates: Dict = {}
     for number in numbers:
-        number_coordinates[number] = [(match.start(), match.end() - 1) for match in re.finditer(number, grid_row)]
+        number_coordinates[number] = [
+            (match.start(), match.end() - 1) for match in re.finditer(number, grid_row)
+        ]
     return number_coordinates
 
 
@@ -37,8 +36,8 @@ def check_for_adjacent_symbols(grid: List, grid_row: int, coordinates: List[Tupl
     #
     print(coordinates)
     cordys = []
-    for cord in range(coordinates[0][0], coordinates[0][-1]+1):
-        cordys.append((coordinates[0][0], coordinates[0][0]+cord))
+    for cord in range(coordinates[0][0], coordinates[0][-1] + 1):
+        cordys.append((coordinates[0][0], coordinates[0][0] + cord))
 
     # match grid_row:
     #     case 0:
@@ -73,8 +72,6 @@ def check_for_adjacent_symbols(grid: List, grid_row: int, coordinates: List[Tupl
     #         pass
 
 
-
-
 def _is_symbol(char):
     return (not char.isdigit()) and char != "."
 
@@ -101,6 +98,6 @@ def execute(filename: str):
 
 
 if __name__ == "__main__":
-    execute('test_input.txt')
+    execute("test_input.txt")
     # print(f"Output: {execute('test_input.txt')}")
     # print(f"Output: {execute('input.txt')}")
